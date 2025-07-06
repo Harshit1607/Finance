@@ -13,7 +13,7 @@ const PORT = process.env.PORT || 5000
 // ✅ CORS configuration
 app.use(
   cors({
-    origin: ["http://localhost:3000", "https://finance-harshit-barejas-projects.vercel.app/"], // set this in your .env (e.g., http://localhost:3000)
+    origin: ["http://localhost:3000", "https://finance-harshit-barejas-projects.vercel.app", "https://finance-rho-opal.vercel.app"], // set this in your .env (e.g., http://localhost:3000)
     credentials: true, // if you use cookies/auth headers
   })
 )
