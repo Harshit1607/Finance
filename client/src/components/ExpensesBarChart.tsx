@@ -14,8 +14,8 @@ export default function ExpensesBarChart({ transactions }: { transactions: Trans
   )
 
   return (
-    <div className="mt-8">
-      <h2 className="text-xl font-semibold">Monthly Expenses</h2>
+    <div className="mt-10 p-6 bg-white rounded-lg shadow-md">
+      <h2 className="text-xl font-semibold mb-4 text-gray-800">📊 Monthly Expenses</h2>
       <ResponsiveContainer width="100%" height={300}>
         <BarChart data={chartData}>
           <XAxis dataKey="month" />

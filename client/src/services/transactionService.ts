@@ -12,6 +12,11 @@ export const createTransaction = async (tx: Transaction) => {
   return await axios.post(API_URL, tx)
 }
 
+export const editTransaction = async (tx: Transaction) => {
+  const res = await axios.put(`${API_URL}/${tx._id}`, tx)
+  return res.data
+}
+
 export const deleteTransaction = async (id: string) => {
   return await axios.delete(`${API_URL}/${id}`)
 }
