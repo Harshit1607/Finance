@@ -3,16 +3,21 @@ import mongoose from 'mongoose'
 import cors from 'cors'
 import transactionRoutes from './routes/transactionRoutes'
 import dotenv from 'dotenv'
-dotenv.config()
-
-
 
 dotenv.config()
+
 const app = express()
 
 const PORT = process.env.PORT || 5000
 
-app.use(cors())
+// ✅ CORS configuration
+app.use(
+  cors({
+    origin: ["http://localhost:3000", "https://finance-harshit-barejas-projects.vercel.app/"], // set this in your .env (e.g., http://localhost:3000)
+    credentials: true, // if you use cookies/auth headers
+  })
+)
+
 app.use(express.json())
 
 app.use('/api/transactions', transactionRoutes)

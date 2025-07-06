@@ -1,7 +1,7 @@
 import axios from 'axios'
 import { Transaction } from '../types/transaction'
 
-const API_URL = 'http://localhost:5000/api/transactions'
+const API_URL = `${process.env.API_URL}/api/transactions`
 
 export const fetchTransactions = async (): Promise<Transaction[]> => {
   const res = await axios.get(API_URL)
