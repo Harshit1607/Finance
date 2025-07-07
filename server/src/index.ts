@@ -11,12 +11,20 @@ const app = express()
 const PORT = process.env.PORT || 5000
 
 // ✅ CORS configuration
+import cors from 'cors'
+
+// CORS setup
 app.use(
   cors({
-    origin: ["http://localhost:3000", "https://finance-harshit-barejas-projects.vercel.app", "https://finance-rho-opal.vercel.app"], // set this in your .env (e.g., http://localhost:3000)
-    credentials: true, // if you use cookies/auth headers
+    origin: [
+      "http://localhost:3000",
+      "https://finance-harshit-barejas-projects.vercel.app",
+      "https://finance-rho-opal.vercel.app"
+    ],
+    methods: ["GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"], // ✅ allow all required methods
   })
 )
+
 
 app.use(express.json())
 
