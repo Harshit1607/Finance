@@ -10,8 +10,6 @@ const app = express()
 
 const PORT = process.env.PORT || 5000
 
-// ✅ CORS configuration
-import cors from 'cors'
 
 // CORS setup
 app.use(
